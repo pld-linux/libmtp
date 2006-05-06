@@ -3,7 +3,7 @@ Name:		libmtp
 Version:	0.0.4
 Release:	1
 License:	GPL v2
-Group:		Applications
+Group:		Libraries
 Source0:	http://dl.sourceforge.net/libmtp/%{name}-%{version}.tar.gz
 # Source0-md5:	ed1ebef445055488e7c18fd5b728bc78
 URL:		http://libmtp.sourceforge.net/
