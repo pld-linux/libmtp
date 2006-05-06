@@ -17,12 +17,20 @@ libmtp is an implementation of Microsoft's Media Transfer Protocol
 operating systems.
 
 %package devel
-Summary:	Header files for libmtp library
+Summary:	Header files for mtp library
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
-This is the package containing the header files for libmtp library.
+This is the package containing the header files for mtp library.
+
+%package static
+Summary:	Static mtp library
+Group:		Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
+
+%description static
+Static mtp library.
 
 %prep
 %setup -q
@@ -53,8 +61,10 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libmtp.so
-%attr(755,root,root) %{_libdir}/libmtp.so.*
 %{_libdir}/libmtp.la
-%{_libdir}/libmtp.a
 %{_includedir}/*
 %{_pkgconfigdir}/*.pc
+
+%files static
+%defattr(644,root,root,755)
+%{_libdir}/libmtp.a
