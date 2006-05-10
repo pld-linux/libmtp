@@ -1,7 +1,7 @@
 Summary:	Implementation of Microsoft's Media Transfer Protocol (MTP)
 Name:		libmtp
 Version:	0.0.4
-Release:	1.1
+Release:	2
 License:	GPL v2
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/libmtp/%{name}-%{version}.tar.gz
