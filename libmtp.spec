@@ -1,7 +1,7 @@
 Summary:	Implementation of Microsoft's Media Transfer Protocol (MTP)
 Name:		libmtp
 Version:	0.0.4
-Release:	1
+Release:	1.1
 License:	GPL v2
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/libmtp/%{name}-%{version}.tar.gz
@@ -37,6 +37,7 @@ Static mtp library.
 
 %build
 
+cp -f /usr/share/automake/config.sub .
 %configure
 %{__make}
 
