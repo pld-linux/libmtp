@@ -1,16 +1,15 @@
 Summary:	Implementation of Microsoft's Media Transfer Protocol (MTP)
 Summary(pl):	Implementacja protoko³u MTP (Media Transfer Protocol) Microsoftu
 Name:		libmtp
-Version:	0.0.11
+Version:	0.0.14
 Release:	1
 License:	GPL v2
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/libmtp/%{name}-%{version}.tar.gz
-# Source0-md5:	960e9e8ba035299c92f792c12b2cf2c6
+# Source0-md5:	df9534490519d4c4a712905744f97abf
 URL:		http://libmtp.sourceforge.net/
 BuildRequires:	automake
-BuildRequires:	libtool
-BuildRequires:	pkgconfig
+BuildRequires:	libusb-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -28,6 +27,7 @@ Summary:	Header files for mtp library
 Summary(pl):	Pliki nag³ówkowe biblioteki mtp
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	libusb-devel
 
 %description devel
 This is the package containing the header files for mtp library.
@@ -70,11 +70,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
-%attr(755,root,root) %{_libdir}/libmtp.so.*.*.*
 %attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_libdir}/libmtp.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
+%doc doc/html/*
 %attr(755,root,root) %{_libdir}/libmtp.so
 %{_libdir}/libmtp.la
 %{_includedir}/*
