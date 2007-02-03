@@ -2,11 +2,12 @@ Summary:	Implementation of Microsoft's Media Transfer Protocol (MTP)
 Summary(pl):	Implementacja protoko³u MTP (Media Transfer Protocol) Microsoftu
 Name:		libmtp
 Version:	0.1.3
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/libmtp/%{name}-%{version}.tar.gz
 # Source0-md5:	311b99c9d9a96efff6383f7466b2b229
+Source1:	%{name}-udev.rules
 URL:		http://libmtp.sourceforge.net/
 BuildRequires:	automake
 BuildRequires:	libusb-devel >= 0.1.11-3
@@ -47,6 +48,18 @@ Static mtp library.
 %description static -l pl
 Statyczna biblioteka mtp.
 
+%package progs
+Summary:	Utilities from mtp library
+Summary(pl):	Narzêdzia biblioteki mtp
+Group:		Applications/Multimedia
+Requires:	%{name} = %{version}-%{release}
+
+%description progs
+This is the package containing utilities from mtp library.
+
+%description progs -l pl
+Ten pakiet zawiera narzêdzia z biblioteki mtp.
+
 %prep
 %setup -q
 
@@ -61,6 +74,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+install -d $RPM_BUILD_ROOT/etc/udev/rules.d
+install %{SOURCE1} $RPM_BUILD_ROOT/etc/udev/rules.d/80-libmtp.rules
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -70,8 +86,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
-%attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/libmtp.so.*.*.*
+%{_sysconfdir}/udev/rules.d/*.rules
 
 %files devel
 %defattr(644,root,root,755)
@@ -84,3 +100,7 @@ rm -rf $RPM_BUILD_ROOT
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libmtp.a
+
+%files progs
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/*
