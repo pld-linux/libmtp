@@ -1,5 +1,5 @@
 Summary:	Implementation of Microsoft's Media Transfer Protocol (MTP)
-Summary(pl):	Implementacja protoko³u MTP (Media Transfer Protocol) Microsoftu
+Summary(pl.UTF-8):   Implementacja protokoÅ‚u MTP (Media Transfer Protocol) Microsoftu
 Name:		libmtp
 Version:	0.1.3
 Release:	2
@@ -18,14 +18,14 @@ libmtp is an implementation of Microsoft's Media Transfer Protocol
 (MTP) in the form of a library suitable primarily for POSIX compliant
 operating systems.
 
-%description -l pl
-libmtp to implementacja protoko³u przesy³ania mediów MTP (Media
-Transfer Protocol) Microsoftu w postaci biblioteki nadaj±cej siê
-przede wszystkim dla systemów operacyjnych zgodnych z POSIX.
+%description -l pl.UTF-8
+libmtp to implementacja protokoÅ‚u przesyÅ‚ania mediÃ³w MTP (Media
+Transfer Protocol) Microsoftu w postaci biblioteki nadajÄ…cej siÄ™
+przede wszystkim dla systemÃ³w operacyjnych zgodnych z POSIX.
 
 %package devel
 Summary:	Header files for mtp library
-Summary(pl):	Pliki nag³ówkowe biblioteki mtp
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki mtp
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libusb-devel
@@ -33,32 +33,32 @@ Requires:	libusb-devel
 %description devel
 This is the package containing the header files for mtp library.
 
-%description devel -l pl
-Ten pakiet zawiera pliki nag³ówkowe biblioteki mtp.
+%description devel -l pl.UTF-8
+Ten pakiet zawiera pliki nagÅ‚Ã³wkowe biblioteki mtp.
 
 %package static
 Summary:	Static mtp library
-Summary(pl):	Statyczna biblioteka mtp
+Summary(pl.UTF-8):   Statyczna biblioteka mtp
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static mtp library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka mtp.
 
 %package progs
 Summary:	Utilities from mtp library
-Summary(pl):	Narzêdzia biblioteki mtp
+Summary(pl.UTF-8):   NarzÄ™dzia biblioteki mtp
 Group:		Applications/Multimedia
 Requires:	%{name} = %{version}-%{release}
 
 %description progs
 This is the package containing utilities from mtp library.
 
-%description progs -l pl
-Ten pakiet zawiera narzêdzia z biblioteki mtp.
+%description progs -l pl.UTF-8
+Ten pakiet zawiera narzÄ™dzia z biblioteki mtp.
 
 %prep
 %setup -q
