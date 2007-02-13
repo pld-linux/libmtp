@@ -1,5 +1,5 @@
 Summary:	Implementation of Microsoft's Media Transfer Protocol (MTP)
-Summary(pl.UTF-8):   Implementacja protokołu MTP (Media Transfer Protocol) Microsoftu
+Summary(pl.UTF-8):	Implementacja protokołu MTP (Media Transfer Protocol) Microsoftu
 Name:		libmtp
 Version:	0.1.3
 Release:	2
@@ -25,7 +25,7 @@ przede wszystkim dla systemów operacyjnych zgodnych z POSIX.
 
 %package devel
 Summary:	Header files for mtp library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki mtp
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki mtp
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libusb-devel
@@ -38,7 +38,7 @@ Ten pakiet zawiera pliki nagłówkowe biblioteki mtp.
 
 %package static
 Summary:	Static mtp library
-Summary(pl.UTF-8):   Statyczna biblioteka mtp
+Summary(pl.UTF-8):	Statyczna biblioteka mtp
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -50,7 +50,7 @@ Statyczna biblioteka mtp.
 
 %package progs
 Summary:	Utilities from mtp library
-Summary(pl.UTF-8):   Narzędzia biblioteki mtp
+Summary(pl.UTF-8):	Narzędzia biblioteki mtp
 Group:		Applications/Multimedia
 Requires:	%{name} = %{version}-%{release}
 
