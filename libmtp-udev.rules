@@ -22,6 +22,8 @@ SYSFS{idVendor}=="041e", SYSFS{idProduct}=="413c", SYMLINK+="libmtp-%k", MODE="6
 SYSFS{idVendor}=="041e", SYSFS{idProduct}=="413d", SYMLINK+="libmtp-%k", MODE="666"
 # Creative Zen Vision:M
 SYSFS{idVendor}=="041e", SYSFS{idProduct}=="413e", SYMLINK+="libmtp-%k", MODE="666"
+# Creative Zen V 
+SYSFS{idVendor}=="041e", SYSFS{idProduct}=="4150", SYMLINK+="libmtp-%k", MODE="666"
 # Creative Zen V Plus
 SYSFS{idVendor}=="041e", SYSFS{idProduct}=="4152", SYMLINK+="libmtp-%k", MODE="666"
 # Samsung:YH-820
