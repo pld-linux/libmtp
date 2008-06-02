@@ -87,6 +87,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_libdir}/libmtp.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libmtp.so.7
 %{_sysconfdir}/udev/rules.d/*.rules
 
 %files devel
@@ -94,8 +95,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc doc/html/*
 %attr(755,root,root) %{_libdir}/libmtp.so
 %{_libdir}/libmtp.la
-%{_includedir}/*
-%{_pkgconfigdir}/*.pc
+%{_includedir}/libmtp.h
+%{_pkgconfigdir}/libmtp.pc
 
 %files static
 %defattr(644,root,root,755)
