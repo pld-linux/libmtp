@@ -2,7 +2,7 @@ Summary:	Implementation of Microsoft's Media Transfer Protocol (MTP)
 Summary(pl.UTF-8):	Implementacja protokołu MTP (Media Transfer Protocol) Microsoftu
 Name:		libmtp
 Version:	0.3.1
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/libmtp/%{name}-%{version}.tar.gz
@@ -10,7 +10,7 @@ Source0:	http://dl.sourceforge.net/libmtp/%{name}-%{version}.tar.gz
 Source1:	%{name}-udev.rules
 URL:		http://libmtp.sourceforge.net/
 BuildRequires:	automake
-BuildRequires:	libusb-devel >= 0.1.11-3
+BuildRequires:	libusb-compat-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -28,7 +28,7 @@ Summary:	Header files for mtp library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki mtp
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	libusb-devel
+Requires:	libusb-compat-devel
 
 %description devel
 This is the package containing the header files for mtp library.
