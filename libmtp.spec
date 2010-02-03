@@ -1,12 +1,16 @@
+#
+# TODO:
+#	- check and update udev rules
+#
 Summary:	Implementation of Microsoft's Media Transfer Protocol (MTP)
 Summary(pl.UTF-8):	Implementacja protokołu MTP (Media Transfer Protocol) Microsoftu
 Name:		libmtp
-Version:	0.3.6
+Version:	1.0.2
 Release:	1
 License:	GPL v2
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/libmtp/%{name}-%{version}.tar.gz
-# Source0-md5:	a45d9d058757c047661481e7e341ac9b
+# Source0-md5:	cdc1cc6afa6be287ff6bc331e71bdc47
 Source1:	%{name}-udev.rules
 URL:		http://libmtp.sourceforge.net/
 BuildRequires:	automake
