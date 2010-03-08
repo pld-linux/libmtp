@@ -1,5 +1,5 @@
-# TODO:
-# - check udev rules
+# TODO
+# - perhaps MODE="660", GROUP="audio" in udev rules?
 Summary:	Implementation of Microsoft's Media Transfer Protocol (MTP)
 Summary(pl.UTF-8):	Implementacja protokołu MTP (Media Transfer Protocol) Microsoftu
 Name:		libmtp
@@ -9,7 +9,6 @@ License:	GPL v2
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/libmtp/%{name}-%{version}.tar.gz
 # Source0-md5:	cdc1cc6afa6be287ff6bc331e71bdc47
-Source1:	%{name}-udev.rules
 URL:		http://libmtp.sourceforge.net/
 BuildRequires:	automake
 BuildRequires:	libusb-compat-devel
@@ -76,8 +75,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT/etc/udev/rules.d
-cp -a %{SOURCE1} $RPM_BUILD_ROOT/etc/udev/rules.d/80-libmtp.rules
+install -d $RPM_BUILD_ROOT/lib/udev/rules.d
+cp -a libmtp.rules $RPM_BUILD_ROOT/lib/udev/rules.d/80-libmtp.rules
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -90,7 +89,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_libdir}/libmtp.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libmtp.so.8
-%{_sysconfdir}/udev/rules.d/*.rules
+/lib/udev/rules.d/*.rules
 
 %files devel
 %defattr(644,root,root,755)
