@@ -1,12 +1,10 @@
-#
 # TODO:
-#	- check and update udev rules
-#
+# - check udev rules
 Summary:	Implementation of Microsoft's Media Transfer Protocol (MTP)
 Summary(pl.UTF-8):	Implementacja protokołu MTP (Media Transfer Protocol) Microsoftu
 Name:		libmtp
 Version:	1.0.2
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/libmtp/%{name}-%{version}.tar.gz
@@ -79,7 +77,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT/etc/udev/rules.d
-install %{SOURCE1} $RPM_BUILD_ROOT/etc/udev/rules.d/80-libmtp.rules
+cp -a %{SOURCE1} $RPM_BUILD_ROOT/etc/udev/rules.d/80-libmtp.rules
 
 %clean
 rm -rf $RPM_BUILD_ROOT
