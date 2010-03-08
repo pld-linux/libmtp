@@ -1,80 +1,80 @@
 SUBSYSTEM!="usb_device", ACTION!="add", GOTO="libmtp_rules_end"
 
 # Creative Zen VisionSpecial:Recentchanges
-SYSFS{idVendor}=="041e", SYSFS{idProduct}=="411f", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="041e", ATTR{idProduct}=="411f", SYMLINK+="libmtp-%k", MODE="666"
 # Creative Portable Media Center
-SYSFS{idVendor}=="041e", SYSFS{idProduct}=="4123", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="041e", ATTR{idProduct}=="4123", SYMLINK+="libmtp-%k", MODE="666"
 # Creative Zen Xtra (MTP mode)
-SYSFS{idVendor}=="041e", SYSFS{idProduct}=="4128", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="041e", ATTR{idProduct}=="4128", SYMLINK+="libmtp-%k", MODE="666"
 # Second generation Dell DJ
-SYSFS{idVendor}=="041e", SYSFS{idProduct}=="412f", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="041e", ATTR{idProduct}=="412f", SYMLINK+="libmtp-%k", MODE="666"
 # Creative Zen Micro (MTP mode)
-SYSFS{idVendor}=="041e", SYSFS{idProduct}=="4130", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="041e", ATTR{idProduct}=="4130", SYMLINK+="libmtp-%k", MODE="666"
 # Creative Zen Touch (MTP mode)
-SYSFS{idVendor}=="041e", SYSFS{idProduct}=="4131", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="041e", ATTR{idProduct}=="4131", SYMLINK+="libmtp-%k", MODE="666"
 # Dell Pocket DJ (MTP mode)
-SYSFS{idVendor}=="041e", SYSFS{idProduct}=="4132", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="041e", ATTR{idProduct}=="4132", SYMLINK+="libmtp-%k", MODE="666"
 # Creative Zen Sleek (MTP mode)
-SYSFS{idVendor}=="041e", SYSFS{idProduct}=="4137", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="041e", ATTR{idProduct}=="4137", SYMLINK+="libmtp-%k", MODE="666"
 # Creative Zen MicroPhoto
-SYSFS{idVendor}=="041e", SYSFS{idProduct}=="413c", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="041e", ATTR{idProduct}=="413c", SYMLINK+="libmtp-%k", MODE="666"
 # Creative Zen Sleek Photo
-SYSFS{idVendor}=="041e", SYSFS{idProduct}=="413d", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="041e", ATTR{idProduct}=="413d", SYMLINK+="libmtp-%k", MODE="666"
 # Creative Zen Vision:M
-SYSFS{idVendor}=="041e", SYSFS{idProduct}=="413e", SYMLINK+="libmtp-%k", MODE="666"
-# Creative Zen V 
-SYSFS{idVendor}=="041e", SYSFS{idProduct}=="4150", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="041e", ATTR{idProduct}=="413e", SYMLINK+="libmtp-%k", MODE="666"
+# Creative Zen V
+ATTR{idVendor}=="041e", ATTR{idProduct}=="4150", SYMLINK+="libmtp-%k", MODE="666"
 # Creative Zen V Plus
-SYSFS{idVendor}=="041e", SYSFS{idProduct}=="4152", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="041e", ATTR{idProduct}=="4152", SYMLINK+="libmtp-%k", MODE="666"
 # Samsung:YH-820
-SYSFS{idVendor}=="04e8", SYSFS{idProduct}=="502e", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="04e8", ATTR{idProduct}=="502e", SYMLINK+="libmtp-%k", MODE="666"
 # Samsung YH-925
-SYSFS{idVendor}=="04e8", SYSFS{idProduct}=="502f", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="04e8", ATTR{idProduct}=="502f", SYMLINK+="libmtp-%k", MODE="666"
 # Samsung YP-T7J
-SYSFS{idVendor}=="04e8", SYSFS{idProduct}=="5047", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="04e8", ATTR{idProduct}=="5047", SYMLINK+="libmtp-%k", MODE="666"
 # Samsung YH-999 Portable Media Center
-SYSFS{idVendor}=="04e8", SYSFS{idProduct}=="5a0f", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="04e8", ATTR{idProduct}=="5a0f", SYMLINK+="libmtp-%k", MODE="666"
 # Intel Bandon Portable Media Center
-SYSFS{idVendor}=="045e", SYSFS{idProduct}=="00c9", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="045e", ATTR{idProduct}=="00c9", SYMLINK+="libmtp-%k", MODE="666"
 # iRiver Portable Media Center
-SYSFS{idVendor}=="1006", SYSFS{idProduct}=="4002", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="1006", ATTR{idProduct}=="4002", SYMLINK+="libmtp-%k", MODE="666"
 # iRiver Portable Media Center
-SYSFS{idVendor}=="1006", SYSFS{idProduct}=="4003", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="1006", ATTR{idProduct}=="4003", SYMLINK+="libmtp-%k", MODE="666"
 # JVC Alneo XA-HD500
-SYSFS{idVendor}=="04f1", SYSFS{idProduct}=="6105", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="04f1", ATTR{idProduct}=="6105", SYMLINK+="libmtp-%k", MODE="666"
 # Philipps HDD6320
-SYSFS{idVendor}=="0471", SYSFS{idProduct}=="01eb", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="0471", ATTR{idProduct}=="01eb", SYMLINK+="libmtp-%k", MODE="666"
 # Philipps HDD6320 2
-SYSFS{idVendor}=="0471", SYSFS{idProduct}=="014b", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="0471", ATTR{idProduct}=="014b", SYMLINK+="libmtp-%k", MODE="666"
 # Philipps HDD1630/17
-SYSFS{idVendor}=="0471", SYSFS{idProduct}=="014c", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="0471", ATTR{idProduct}=="014c", SYMLINK+="libmtp-%k", MODE="666"
 # SanDisk Sansa c150
-SYSFS{idVendor}=="0781", SYSFS{idProduct}=="7410", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="0781", ATTR{idProduct}=="7410", SYMLINK+="libmtp-%k", MODE="666"
 # SanDisk Sansa e200
-SYSFS{idVendor}=="0781", SYSFS{idProduct}=="7420", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="0781", ATTR{idProduct}=="7420", SYMLINK+="libmtp-%k", MODE="666"
 # SanDisk Sansa e260
-SYSFS{idVendor}=="0781", SYSFS{idProduct}=="7420", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="0781", ATTR{idProduct}=="7420", SYMLINK+="libmtp-%k", MODE="666"
 # iRiver T10
-SYSFS{idVendor}=="4102", SYSFS{idProduct}=="1113", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="4102", ATTR{idProduct}=="1113", SYMLINK+="libmtp-%k", MODE="666"
 # iRiver T20 FM
-SYSFS{idVendor}=="4102", SYSFS{idProduct}=="1114", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="4102", ATTR{idProduct}=="1114", SYMLINK+="libmtp-%k", MODE="666"
 # iRiver U10
-SYSFS{idVendor}=="4102", SYSFS{idProduct}=="1116", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="4102", ATTR{idProduct}=="1116", SYMLINK+="libmtp-%k", MODE="666"
 # iRiver T10
-SYSFS{idVendor}=="4102", SYSFS{idProduct}=="1117", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="4102", ATTR{idProduct}=="1117", SYMLINK+="libmtp-%k", MODE="666"
 # iRiver T20
-SYSFS{idVendor}=="4102", SYSFS{idProduct}=="1118", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="4102", ATTR{idProduct}=="1118", SYMLINK+="libmtp-%k", MODE="666"
 # iRiver T30
-SYSFS{idVendor}=="4102", SYSFS{idProduct}=="1119", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="4102", ATTR{idProduct}=="1119", SYMLINK+="libmtp-%k", MODE="666"
 # iRiver H10
-SYSFS{idVendor}=="4102", SYSFS{idProduct}=="2101", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="4102", ATTR{idProduct}=="2101", SYMLINK+="libmtp-%k", MODE="666"
 # iRiver H10
-SYSFS{idVendor}=="4102", SYSFS{idProduct}=="2102", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="4102", ATTR{idProduct}=="2102", SYMLINK+="libmtp-%k", MODE="666"
 # Dell DJ Itty
-SYSFS{idVendor}=="413c", SYSFS{idProduct}=="4500", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="413c", ATTR{idProduct}=="4500", SYMLINK+="libmtp-%k", MODE="666"
 # Toshiba Gigabeat MEGF-40
-SYSFS{idVendor}=="0930", SYSFS{idProduct}=="0009", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="0930", ATTR{idProduct}=="0009", SYMLINK+="libmtp-%k", MODE="666"
 # Toshiba Gigabeat
-SYSFS{idVendor}=="0930", SYSFS{idProduct}=="000c", SYMLINK+="libmtp-%k", MODE="666"
+ATTR{idVendor}=="0930", ATTR{idProduct}=="000c", SYMLINK+="libmtp-%k", MODE="666"
 
 LABEL="libmtp_rules_end"
