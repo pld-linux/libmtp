@@ -5,7 +5,7 @@ Summary(pl.UTF-8):	Implementacja protokołu MTP (Media Transfer Protocol) Micros
 Name:		libmtp
 Version:	1.0.4
 Release:	1
-License:	GPL v2
+License:	LGPL v2+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/libmtp/%{name}-%{version}.tar.gz
 # Source0-md5:	a9ae962c72cc46988409ce19d60c5850
@@ -61,6 +61,19 @@ This is the package containing utilities from mtp library.
 %description progs -l pl.UTF-8
 Ten pakiet zawiera narzędzia z biblioteki mtp.
 
+%package -n udev-libmtp
+Summary:	UDEV rules for libmtp devices
+Summary(pl.UTF-8):	Reguły UDEV dla urządzeń libmtp
+Group:		Applications/System
+Requires:	%{name} = %{version}-%{release}
+Requires:	udev-core
+
+%description -n udev-libmtp
+UDEV rules for libmtp devices.
+
+%description -n udev-libmtp -l pl.UTF-8
+Reguły UDEV dla urządzeń libmtp.
+
 %prep
 %setup -q
 
@@ -75,8 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT/lib/udev/rules.d
-cp -a libmtp.rules $RPM_BUILD_ROOT/lib/udev/rules.d/80-libmtp.rules
+mv -f $RPM_BUILD_ROOT/lib/udev/rules.d/{libmtp,80-libmtp}.rules
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -89,8 +101,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_libdir}/libmtp.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libmtp.so.8
-/lib/udev/rules.d/*.rules
-/lib/udev/mtp-probe
 
 %files devel
 %defattr(644,root,root,755)
@@ -106,4 +116,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files progs
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/mtp-*
+
+%files -n udev-libmtp
+%defattr(644,root,root,755)
+/lib/udev/rules.d/80-libmtp.rules
+/lib/udev/mtp-probe
