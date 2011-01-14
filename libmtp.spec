@@ -120,5 +120,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n udev-libmtp
 %defattr(644,root,root,755)
+%attr(755,root,root) /lib/udev/mtp-probe
 /lib/udev/rules.d/80-libmtp.rules
-/lib/udev/mtp-probe
