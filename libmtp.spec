@@ -1,16 +1,15 @@
-# TODO
-# - perhaps MODE="660", GROUP="audio" in udev rules?
 Summary:	Implementation of Microsoft's Media Transfer Protocol (MTP)
 Summary(pl.UTF-8):	Implementacja protokołu MTP (Media Transfer Protocol) Microsoftu
 Name:		libmtp
-Version:	1.0.4
+Version:	1.1.0
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/libmtp/%{name}-%{version}.tar.gz
-# Source0-md5:	a9ae962c72cc46988409ce19d60c5850
+# Source0-md5:	fd7b293436528f4c780a9da6e5cc5398
 URL:		http://libmtp.sourceforge.net/
 BuildRequires:	automake
+BuildRequires:	doxygen
 BuildRequires:	libusb-compat-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -79,7 +78,10 @@ Reguły UDEV dla urządzeń libmtp.
 
 %build
 cp -f /usr/share/automake/config.sub .
-%configure
+%configure \
+	--enable-doxygen \
+	--with-udev-group=audio \
+	--with-udev-mode=0660
 %{__make}
 
 %install
@@ -87,8 +89,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
-mv -f $RPM_BUILD_ROOT/lib/udev/rules.d/{libmtp,80-libmtp}.rules
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -100,7 +100,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_libdir}/libmtp.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libmtp.so.8
+%attr(755,root,root) %ghost %{_libdir}/libmtp.so.9
 
 %files devel
 %defattr(644,root,root,755)
@@ -121,4 +121,4 @@ rm -rf $RPM_BUILD_ROOT
 %files -n udev-libmtp
 %defattr(644,root,root,755)
 %attr(755,root,root) /lib/udev/mtp-probe
-/lib/udev/rules.d/80-libmtp.rules
+/lib/udev/rules.d/39-libmtp.rules
