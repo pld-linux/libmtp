@@ -10,7 +10,10 @@ Source0:	http://downloads.sourceforge.net/libmtp/%{name}-%{version}.tar.gz
 URL:		http://libmtp.sourceforge.net/
 BuildRequires:	automake
 BuildRequires:	doxygen
-BuildRequires:	libusb-compat-devel
+BuildRequires:	libgcrypt-devel
+BuildRequires:	libusb-devel >= 1.0.0
+BuildRequires:	pkgconfig
+Requires:	libusb >= 1.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -28,7 +31,8 @@ Summary:	Header files for mtp library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki mtp
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	libusb-compat-devel
+Requires:	libgcrypt-devel
+Requires:	libusb-devel >= 1.0.0
 
 %description devel
 This is the package containing the header files for mtp library.
