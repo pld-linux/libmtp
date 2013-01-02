@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	apidocs		# do not build and package API docs
+
 Summary:	Implementation of Microsoft's Media Transfer Protocol (MTP)
 Summary(pl.UTF-8):	Implementacja protokołu MTP (Media Transfer Protocol) Microsoftu
 Name:		libmtp
@@ -9,7 +13,7 @@ Source0:	http://downloads.sourceforge.net/libmtp/%{name}-%{version}.tar.gz
 # Source0-md5:	f80e45c0e6e5798c434bb1c26a7b602d
 URL:		http://libmtp.sourceforge.net/
 BuildRequires:	automake
-BuildRequires:	doxygen
+%{?with_apidocs:BuildRequires:	doxygen}
 BuildRequires:	libgcrypt-devel
 BuildRequires:	libusb-devel >= 1.0.0
 BuildRequires:	pkgconfig
@@ -83,7 +87,7 @@ Reguły UDEV dla urządzeń libmtp.
 %build
 cp -f /usr/share/automake/config.sub .
 %configure \
-	--enable-doxygen \
+	%{?with_apidocs:--enable-doxygen} \
 	--with-udev-group=audio \
 	--with-udev-mode=0660
 %{__make}
@@ -108,7 +112,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
+%if %{with apidocs}
 %doc doc/html/*
+%endif
 %attr(755,root,root) %{_libdir}/libmtp.so
 %{_libdir}/libmtp.la
 %{_includedir}/libmtp.h
