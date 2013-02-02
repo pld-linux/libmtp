@@ -6,7 +6,7 @@ Summary:	Implementation of Microsoft's Media Transfer Protocol (MTP)
 Summary(pl.UTF-8):	Implementacja protokołu MTP (Media Transfer Protocol) Microsoftu
 Name:		libmtp
 Version:	1.1.5
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/libmtp/%{name}-%{version}.tar.gz
@@ -94,8 +94,8 @@ cp -f /usr/share/automake/config.sub .
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__make} install \
+	htmldocdir=%{_docdir}/%{name}-devel-%{version} \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
@@ -113,7 +113,7 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %if %{with apidocs}
-%doc doc/html/*
+%doc %{_docdir}/%{name}-devel-%{version}
 %endif
 %attr(755,root,root) %{_libdir}/libmtp.so
 %{_libdir}/libmtp.la
