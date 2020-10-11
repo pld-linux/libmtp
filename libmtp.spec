@@ -86,7 +86,6 @@ Reguły UDEV dla urządzeń libmtp.
 %setup -q
 
 %build
-cp -f /usr/share/automake/config.sub .
 %configure \
 	%{__enable_disable apidocs doxygen} \
 	--with-udev=/lib/udev \
