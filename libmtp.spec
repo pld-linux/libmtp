@@ -17,6 +17,7 @@ BuildRequires:	automake
 BuildRequires:	libgcrypt-devel
 BuildRequires:	libusb-devel >= 1.0.0
 BuildRequires:	pkgconfig
+BuildRequires:	rpmbuild(macros) >= 1.527
 Requires:	libusb >= 1.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -87,7 +88,7 @@ Reguły UDEV dla urządzeń libmtp.
 %build
 cp -f /usr/share/automake/config.sub .
 %configure \
-	%{?with_apidocs:--enable-doxygen} \
+	%{__enable_disable apidocs doxygen} \
 	--with-udev=/lib/udev \
 	--with-udev-group=audio \
 	--with-udev-mode=0660
