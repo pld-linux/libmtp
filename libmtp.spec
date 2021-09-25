@@ -9,7 +9,7 @@ Version:	1.1.19
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://downloads.sourceforge.net/libmtp/%{name}-%{version}.tar.gz
+Source0:	https://downloads.sourceforge.net/libmtp/%{name}-%{version}.tar.gz
 # Source0-md5:	4f3aa224d71a1d1a7d3e52a588f00850
 URL:		http://libmtp.sourceforge.net/
 BuildRequires:	automake
