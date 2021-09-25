@@ -5,12 +5,12 @@
 Summary:	Implementation of Microsoft's Media Transfer Protocol (MTP)
 Summary(pl.UTF-8):	Implementacja protokołu MTP (Media Transfer Protocol) Microsoftu
 Name:		libmtp
-Version:	1.1.18
+Version:	1.1.19
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/libmtp/%{name}-%{version}.tar.gz
-# Source0-md5:	7915496daa3f4ea3e095f0161f83d4d4
+# Source0-md5:	4f3aa224d71a1d1a7d3e52a588f00850
 URL:		http://libmtp.sourceforge.net/
 BuildRequires:	automake
 %{?with_apidocs:BuildRequires:	doxygen}
